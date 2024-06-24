@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import About from './Components/About';
+import Services from './Components/Services';
+import Contact from './Components/Contact';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
-function App() {
+
+
+ function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
+       
+       
+       
+       
+       
+       <Row>
+           <Router>
+               <Col sm={2} className='Col1'> <Navbar/> </Col>
+               <Col sm={10} className='Col2'>
+               <Routes>
+                <Route path='/'exact Component={Home}/>
+                <Route path='/about'exact Component={About}/>
+                <Route path='/services'exact Component={Services}/>
+                <Route path='/contact'exact Component={Contact}/>
+               </Routes>
+               </Col>
 
-export default App;
+           </Router>
+       </Row>
+    </div>
+  )
+}
+export default App
+
+
+
+
+  
+   
+  
+
+
