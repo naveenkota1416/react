@@ -25,7 +25,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
                <Col sm={2} className='Col1'> <Navbar/> </Col>
                <Col sm={10} className='Col2'>
                <Routes>
-                <Route path='/'exact Component={Home}/>
+                <Route path='/react'exact Component={Home}/>
                 <Route path='/about'exact Component={About}/>
                 <Route path='/services'exact Component={Services}/>
                 <Route path='/contact'exact Component={Contact}/>
